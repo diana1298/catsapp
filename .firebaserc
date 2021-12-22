@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ng-cats-list": {
+      "hosting": {
+        "cats-management": [
+          "ng-cats-list"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ng-cats-list"
+  }
+}
