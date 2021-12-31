@@ -19,7 +19,7 @@ export const initialState: State = {
   catsList: {
     cats: [
     ],
-    catCount: 1
+    catCount: 0
   },
 
 };

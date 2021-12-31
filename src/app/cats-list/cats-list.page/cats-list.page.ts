@@ -19,5 +19,5 @@ export class CatsListPage implements OnInit {
   ngOnInit(): void {
 
   }
-  
+
 }

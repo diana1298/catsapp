@@ -17,17 +17,15 @@ export class CatLocationComponent implements OnInit, AfterViewInit {
   markers: Marker[] = [];
 
   @Input('catsList') set _catListRef(catsStore: any) {
-    console.log(catsStore)
     this.catList = catsStore.catsList.cats;
     for(const cat of this.catList) {
       this.markers.push({
-        lat: cat.location._lat,
-        lng: cat.location._long,
+        lat: cat.location?._lat,
+        lng: cat.location?._long,
         label: cat.name,
         draggable: false
       });
     }
-    console.log('markers',this.markers)
   }
 
   constructor() { }

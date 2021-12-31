@@ -2,17 +2,20 @@
   margin: 10px;
   &-menu{
     border-bottom: 1px solid #ddd;
+    padding: 0 10px 0 15px;
   }
   &-title{
     background-color: transparent;
-    padding: 0.75rem 1.25rem;
+    padding: 10px 0;
     position: relative;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
   }
   &-tools{
-    float: right;
-    margin-right: -0.625rem;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 50%;
   }
   &-items-container{
     width: 100%;
@@ -23,10 +26,11 @@
     overflow:scroll;
     img{
       border-radius: 50%;
-      height: 80px;
-      width: 80px;
+      height: 50px;
+      width: 50px;
       max-width: 100%;
       object-fit: cover;
+      margin: 0 auto;
     }
   }
   &-items-container {

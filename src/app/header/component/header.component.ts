@@ -41,9 +41,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
               public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.activeRoute.params.pipe(takeUntil(this.destroy$)).subscribe(routeParams => {
-      console.log(this.router)
-    });
   }
 
   addCatDialog() {

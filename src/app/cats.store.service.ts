@@ -32,7 +32,6 @@ export class CatsStoreService {
   }
 
   public getCatsList(): Observable<any> {
-    console.log('servicr store')
     return this.store.pipe(select(selectors.selectCats));
   }
 
