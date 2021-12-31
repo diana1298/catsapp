@@ -1,27 +1,27 @@
 <div class="col-sm-4 col-md-offset-4">
-  <mat-card class="example-card" *ngIf="cat">
+  <mat-card class="example-card" *ngIf="selectedCat">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{cat.name}}</mat-card-title>
-      <mat-card-subtitle>Age: {{cat.age}}</mat-card-subtitle>
+<!--      <div mat-card-avatar class="example-header-image"></div>-->
+      <mat-card-title>{{selectedCat.name}}</mat-card-title>
+      <mat-card-subtitle>Age: {{selectedCat.age}}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="{{cat.imgPath}}" alt="{{cat.name}}" width="450"/>
+    <img mat-card-image src="{{selectedCat.imgPath}}" alt="{{selectedCat.name}}" width="450"/>
     <mat-card-content>
       <p>
-        <b>Colors:</b> {{cat.colors}}
+        <b>Colors:</b> {{selectedCat.colors}}
       </p>
       <p>
-        <b>Likes:</b> {{cat.likes}}
+        <b>Likes:</b> {{selectedCat.likes}}
       </p>
       <p>
-        <b>Gender:</b> {{cat.gender}}
+        <b>Gender:</b> {{selectedCat.gender}}
       </p>
     </mat-card-content>
-    <mat-card-actions style="height: 50px">
-      <span mat-button class="pull-right edit-icon" (click)="editCatDialog(cat, cat)">
+    <div class="card-actions" style="height: 50px">
+      <span mat-button class="pull-right edit-icon" (click)="editCatDialog(selectedCat)">
       </span>
-      <span mat-button class="pull-right delete-icon" (click)="deleteCatDialog(cat)">
+      <span mat-button class="pull-right delete-icon" (click)="deleteCatDialog(selectedCat)">
       </span>
-    </mat-card-actions>
+    </div>
   </mat-card>
 </div>

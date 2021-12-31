@@ -1,0 +1,42 @@
+<div class="header-items-container" style="margin-top: 10px;">
+  <div class="header-title">
+    <div class="header-menu">
+      <h2 class="header-link" routerLink="/cats"
+          [class]="{'active-link' : router.url === '/cats' || router.url.indexOf('cat') === 1}">
+        My Cats
+      </h2>
+      <h2 class="header-link" routerLink="/locations" routerLinkActive="active-link">
+        Cats Location
+      </h2>
+    </div>
+
+    <br>
+    <h4 class="text-teal" style="display: inline-block">I'm the proud owner of {{catListCount}} kitties</h4>
+    <div class="header-tools">
+      <div class="badge badge-success">
+        <button mat-button (click)="addCatDialog()">Add New Cat</button>
+      </div>
+    </div>
+  </div>
+  <div class="header-items-container" *ngIf="router.url === '/cats' || router.url.indexOf('cat') === 1">
+<!--    <div class="horizontal-arrows horizontal-arrows-left">-->
+<!--      <span class="arrow"><</span>-->
+<!--    </div>-->
+    <ul class="header-items clearfix">
+      <li *ngFor="let cat of catList" class="header-items-container-item" (click)="gotoCatDetail(cat)">
+        <a [routerLink]="['/cat', cat.id]">
+          <img src="{{cat.imgPath}}" alt="Cat Image" width="150" class="clickable img-responsive"  />
+          <span class="header-cat-name">{{cat.name}}</span>
+        </a>
+      </li>
+    </ul>
+<!--    <div class="horizontal-arrows horizontal-arrows-right">-->
+<!--      <span class="arrow">></span>-->
+<!--    </div>-->
+  </div>
+<!--  <div>-->
+<!--    <pre>-->
+<!--      {{catListRef}}-->
+<!--    </pre>-->
+<!--  </div>-->
+</div>

@@ -1,14 +1,14 @@
 .header {
   margin: 10px;
+  &-menu{
+    border-bottom: 1px solid #ddd;
+  }
   &-title{
     background-color: transparent;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     padding: 0.75rem 1.25rem;
     position: relative;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
-    min-height: 80px;
-
   }
   &-tools{
     float: right;
@@ -20,6 +20,7 @@
   &-items{
     padding-left: 0;
     list-style: none;
+    overflow:scroll;
     img{
       border-radius: 50%;
       height: 80px;
@@ -31,7 +32,8 @@
   &-items-container {
     overflow-x: scroll;
     min-width: 975px;
-    white-space: nowrap
+    white-space: nowrap;
+    padding-left: 20px;
   }
   &-items-container-item{
     width: 10%;
@@ -41,7 +43,7 @@
   }
   &-cat-name{
     color: #495057;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
     overflow: hidden;
     margin-top: 5px;
@@ -62,17 +64,27 @@
     height: auto;
     max-width: 100%;
   }
-}
 
-@media (min-width: 768px) {
-  .header {
-    &-items-container {
-      overflow-x: scroll;
-      min-width: 720px;
-    }
-    &-items-container-item{
-      width: 20%;
+  @media (min-width: 768px) {
+    .header {
+      &-items-container {
+        overflow-x: scroll;
+        min-width: 720px;
+      }
+      &-items-container-item{
+        width: 20%;
+      }
     }
   }
 }
-
+.header-link{
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  border: 1px solid #ddd;
+  color: #acacac;
+}
+.active-link {
+  cursor: default;
+  background-color: #fff;
+  border-bottom-color: transparent;
+}

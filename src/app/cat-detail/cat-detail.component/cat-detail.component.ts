@@ -18,8 +18,13 @@ export class CatDetailComponent implements OnInit, OnDestroy {
 
   public catSubscribe$: Subject<Cat> = new Subject();
   private readonly destroy$: Subject<void> = new Subject();
+  selectedCat: Cat;
 
-  @Input() cat: Cat;
+  // @Input() cat: Cat;
+
+  @Input('cat') set _selectedCatRef(cat: Cat) {
+    this.selectedCat = cat;
+  }
 
   constructor(private catsService: CatsService,
               private route: ActivatedRoute,
@@ -34,7 +39,7 @@ export class CatDetailComponent implements OnInit, OnDestroy {
     });
   }
 
-  editCatDialog(cat: Cat, prevCat: Cat): void {
+  editCatDialog(cat: Cat): void {
     this.dialog.open(AddCatDialogComponent, {
       data: {cat, editMode: true}
     });

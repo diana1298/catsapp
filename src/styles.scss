@@ -17,6 +17,7 @@
   background-repeat: no-repeat;
   min-height: 30px;
   min-width: 50px;
+  filter: invert(67%) sepia(51%) saturate(78%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 .edit-icon:hover, .delete-icon:hover {
   filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
@@ -28,6 +29,23 @@
   background-repeat: no-repeat;
   min-height: 30px;
   min-width: 50px;
+  filter: invert(67%) sepia(51%) saturate(78%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+agm-map {
+  height: 300px;
+}
+
+.active-link{
+  color: #346da1 !important;
+  text-display: none !important;
+}
+
+.header-link {
+  color: #666666;
+  display: inline-block;
+  margin-right: 30px !important;
+  cursor: pointer;
 }
 
 //html, body { height: 100%; }
