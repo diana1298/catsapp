@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/admin-lte/dist/css/adminlte.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.clickable {
+  cursor: pointer;
+}
+.clickable:hover {
+  color: #2068b6;
+  background-color: #2068b6;
+}
+.edit-icon {
+  cursor: pointer;
+  background-image: url('/assets/images/icon-pencil.svg');
+  background-repeat: no-repeat;
+  min-height: 30px;
+  min-width: 50px;
+  filter: invert(67%) sepia(51%) saturate(78%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+.edit-icon:hover, .delete-icon:hover {
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+.delete-icon {
+  cursor: pointer;
+  background-image: url('/assets/images/icon-trash-can.svg');
+  background-repeat: no-repeat;
+  min-height: 30px;
+  min-width: 50px;
+  filter: invert(67%) sepia(51%) saturate(78%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+agm-map {
+  height: 300px;
+}
+
+.active-link{
+  color: #346da1 !important;
+  text-display: none !important;
+}
+
+.header-link {
+  color: #666666;
+  display: inline-block;
+  margin-right: 30px !important;
+  cursor: pointer;
+}
+
+//html, body { height: 100%; }
+//body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

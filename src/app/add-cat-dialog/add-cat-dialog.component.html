@@ -1,0 +1,46 @@
+
+<section>
+  <h4 *ngIf="!data.editMode">So, you got another Cat?</h4>
+  <h4 *ngIf="data.editMode">Is this kitty data right?</h4>
+  <form [formGroup]="newCatForm">
+
+    <mat-form-field>
+      <input type="text" matInput required placeholder="New Cat's Name" formControlName="name">
+      <mat-error align="end">Name is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Date of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" [max]="maxDate" required formControlName="birthdate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error align="end">Date of Birth is required</mat-error>
+    </mat-form-field>
+
+    <mat-radio-group aria-label="Select a Gender" class="mat-radio-group" formControlName="gender">
+      <mat-radio-button value="male">Male</mat-radio-button>
+      <mat-radio-button value="female">Female</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field>
+      <input type="text" matInput placeholder="Colors" formControlName="colors">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" matInput placeholder="Likes" formControlName="likes">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" matInput placeholder="Image URL" formControlName="imgPath">
+      <mat-error align="end">URL is not a valid Image</mat-error>
+    </mat-form-field>
+    <button mat-button (click)="closeDialog()">Close</button>
+    <button type="submit" mat-raised-button color="primary" (click)="addNewCat()"
+            class="pull-right" *ngIf="!data.editMode"
+            [disabled]="newCatForm.invalid">Add</button>
+    <button type="submit" mat-raised-button color="primary" (click)="updateCat()"
+            class="pull-right" *ngIf="data.editMode"
+            [disabled]="newCatForm.invalid">Change</button>
+  </form>
+</section>
+

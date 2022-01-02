@@ -1,0 +1,11 @@
+
+<section>
+  <h2>Delete Cat</h2>
+  <p>Are you sure you want to delete cat? <br>
+  </p>
+  <h3 class="text-center" style="margin-bottom: 5px">{{data.name}}</h3>
+  <h4 class="text-center">Age: {{data.age}}</h4>
+    <button mat-button (click)="closeDialog()" >Close</button>
+    <button mat-raised-button color="primary" (click)="deleteCat()" class="pull-right">Yes</button>
+</section>
+

@@ -1,0 +1,27 @@
+<div class="col-sm-4 col-md-offset-4">
+  <mat-card class="example-card" *ngIf="selectedCat">
+    <mat-card-header>
+<!--      <div mat-card-avatar class="example-header-image"></div>-->
+      <mat-card-title>{{selectedCat.name}}</mat-card-title>
+      <mat-card-subtitle>Age: {{selectedCat.age}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{selectedCat.imgPath}}" alt="{{selectedCat.name}}" width="450"/>
+    <mat-card-content>
+      <p>
+        <b>Colors:</b> {{selectedCat.colors}}
+      </p>
+      <p>
+        <b>Likes:</b> {{selectedCat.likes}}
+      </p>
+      <p>
+        <b>Gender:</b> {{selectedCat.gender}}
+      </p>
+    </mat-card-content>
+    <div class="card-actions" style="height: 50px">
+      <span mat-button class="pull-right edit-icon" (click)="editCatDialog(selectedCat)">
+      </span>
+      <span mat-button class="pull-right delete-icon" (click)="deleteCatDialog(selectedCat)">
+      </span>
+    </div>
+  </mat-card>
+</div>
