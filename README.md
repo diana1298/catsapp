@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-# catsManagement
-A cat lady cats management to not put any single kitty in danger.
-=======
 # CatsManagement
+A cat-lady cats management. 
+Do not put any single kitty in danger.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 # Notes
@@ -15,7 +13,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 	6. $ nvm use 16
 	7. $ npm install
 	9. $ ng serve --open or
-	10.$ ng serve and navigate to `http://localhost:4200/`. 
+	10.$ ng serve and navigate to `http://localhost:4200/`.
+	11. Also, there's a live DEMO at http://cats.doniphanmolina.com 
 
 
 ## Development server
@@ -25,4 +24,3 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
->>>>>>> master
